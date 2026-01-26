@@ -1,0 +1,3 @@
+fuzzywuzzy
+PyMuPDF
+tabula-py
