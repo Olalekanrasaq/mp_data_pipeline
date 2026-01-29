@@ -9,8 +9,6 @@ def merge_backfill_reports(**context):
 
     logical_date = context["logical_date"].date().strftime("%Y-%m-%d")  
     if logical_date != date_now:
-        print(logical_date)
-        print(date_now)
         return "Not a latest run. No merging needed."
     
     base_dir = "/opt/airflow/dags/DataFiles"
@@ -35,4 +33,4 @@ def merge_backfill_reports(**context):
             f"{base_dir}/{sc}/{report_date}/combined_report.csv",
             index=False
         )
-        print("Merging completed successfully for {sc}.")
+        print(f"Merging completed successfully for {sc}.")
